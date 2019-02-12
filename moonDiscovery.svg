@@ -23,8 +23,26 @@
       <circle cy="10" cx="30" r="5" style="fill:rgb(100, 100, 100)"/>
       <circle cy="40" cx="10" r="5" style="fill:rgb(100, 100, 100)"/>
     </g>
+
+    <g  id="fusé">
+      <rect x="0" y="0" width="20" height="40" fill="grey"/>
+    </g>
   </defs>
 
+<!-- annimation -->
+<animateTransform xlink:href="#fusé"
+  attributeName="transform" type="translate" values="0 0; 0 -50"
+  dur="3s" repeatCount="1" />
+
+<animateTransform xlink:href="#fusé"
+  attributeName="transform" type="translate" values="0 -50; 0 -150"
+  begin="3" dur="3s" repeatCount="1" />
+
+<animateTransform xlink:href="#fusé"
+  attributeName="transform" type="rotate" values="0 0 -150; 20 100 -200"
+  begin="6" dur="3s" repeatCount="1" />
+
+<!-- scene 1 -->
   <use xlink:href="#stars" transform="translate(330, 357)" />
   <use xlink:href="#stars" transform="translate(450, 156)" />
   <use xlink:href="#stars" transform="translate(49, 444)" />
@@ -34,8 +52,9 @@
   <use xlink:href="#stars" transform="translate(700, 50)" />
   <use xlink:href="#stars" transform="translate(280, 100)" />
   <use xlink:href="#stars" transform="translate(100, 250)" />
-  <use xlink:href="#earth" transform="translate(100, 250)" />
+  <use xlink:href="#earth" transform="translate(100, 350)" />
   <use xlink:href="#moon" transform="translate(500, 100)" />
+  <use xlink:href="#fusé" transform="translate(150, 315) rotate(20 10 40)" />
 
 
 </svg>
