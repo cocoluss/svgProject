@@ -4,11 +4,24 @@
      viewBox="0 0 1024 "
      version="1.1">
   <title>Moon exploration</title>
-  <rect x="0" y="0" width="800" height="500" style="fill:rgb(0,20,30); stroke:none"/>
+  <rect x="0" y="0" width="800" height="500" style="fill:rgb(03,5,20); stroke:none"/>
   <defs>
     <circle id="stars" cy="2" cx="2" r="2" style="fill:white"/>
     <g  id="earth">
       <circle cy="50" cx="50" r="50" style="fill:blue"/>
+      <path d="M 50,0 C 75,0 100,25 100,50 S 75,75 50,50 S 60,50 70,50 S 80,25 50,0" style="fill:green"/>
+      <path d="M 50,100 C 75,100 80,90 85,85" style="fill:white"/>
+      <ellipse cy="25" cx="60" rx="5" ry="7" style="fill:green"/>
+      <ellipse cy="55" cx="25" rx="10" ry="20" style="fill:green" transform="rotate(-30 25 55)"/>
+    </g>
+    <g  id="moon">
+      <circle cy="30" cx="30" r="30" style="fill:grey"/>
+      <circle cy="20" cx="20" r="5" style="fill:rgb(60,60,60)"/>
+      <circle cy="50" cx="25" r="5" style="fill:rgb(70,70,70)"/>
+      <circle cy="30" cx="50" r="5" style="fill:rgb(75,75,75)"/>
+      <circle cy="30" cx="40" r="10" style="fill:rgb(100, 100, 100)"/>
+      <circle cy="10" cx="30" r="5" style="fill:rgb(100, 100, 100)"/>
+      <circle cy="40" cx="10" r="5" style="fill:rgb(100, 100, 100)"/>
     </g>
   </defs>
 
@@ -16,9 +29,13 @@
   <use xlink:href="#stars" transform="translate(450, 156)" />
   <use xlink:href="#stars" transform="translate(49, 444)" />
   <use xlink:href="#stars" transform="translate(68, 357)" />
+  <use xlink:href="#stars" transform="translate(500, 300)" />
+  <use xlink:href="#stars" transform="translate(650, 400)" />
+  <use xlink:href="#stars" transform="translate(700, 50)" />
   <use xlink:href="#stars" transform="translate(280, 100)" />
   <use xlink:href="#stars" transform="translate(100, 250)" />
   <use xlink:href="#earth" transform="translate(100, 250)" />
+  <use xlink:href="#moon" transform="translate(500, 100)" />
 
 
 </svg>
