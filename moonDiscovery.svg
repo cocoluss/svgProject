@@ -4,12 +4,21 @@
      viewBox="0 0 1024 "
      version="1.1">
   <title>Moon exploration</title>
+  <rect x="0" y="0" width="800" height="500" style="fill:rgb(0,20,30); stroke:none"/>
+  <defs>
+    <circle id="stars" cy="2" cx="2" r="2" style="fill:white"/>
+    <g  id="earth">
+      <circle cy="50" cx="50" r="50" style="fill:blue"/>
+    </g>
+  </defs>
 
-  <script><![CDATA[
-
-    // SVG script here
-
-  ]]></script>
+  <use xlink:href="#stars" transform="translate(330, 357)" />
+  <use xlink:href="#stars" transform="translate(450, 156)" />
+  <use xlink:href="#stars" transform="translate(49, 444)" />
+  <use xlink:href="#stars" transform="translate(68, 357)" />
+  <use xlink:href="#stars" transform="translate(280, 100)" />
+  <use xlink:href="#stars" transform="translate(100, 250)" />
+  <use xlink:href="#earth" transform="translate(100, 250)" />
 
 
 </svg>
