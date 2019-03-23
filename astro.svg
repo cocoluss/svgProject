@@ -1,0 +1,31 @@
+<?xml-stylesheet type="text/css" href="s1.css" charset="utf-8"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg width="1024" height="768" xml:lang="fr"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<defs>
+  <g id="astronaute">
+    <ellipse transform="rotate(10)" cx="185" cy="280"  rx="15" ry="40"/> <!-- jambe gauche -->
+    
+    <ellipse cx="150" cy="166"  rx="35" ry="35"/> <!-- tete -->
+    <ellipse transform="rotate(10)" cx="161.2" cy="192.4"  rx="11" ry="23"/> <!-- bras gauche -->
+    <ellipse cx="155" cy="215"  rx="9" ry="17" transform="rotate(10)"/> <!-- main gauche -->
+    <ellipse cx="150" cy="235"  rx="25" ry="50.5"/> <!-- haut -->
+    <ellipse cx="135" cy="240"  rx="11" ry="23" transform="rotate(-10)"/> <!--bras droit-->
+    <ellipse cx="135" cy="270"  rx="9" ry="17" transform="rotate(-10)"/> <!-- main droie -->
+    <ellipse cx="115" cy="330"  rx="15" ry="40" transform="rotate(-10)"/>
+    <rect x="125" y="145" width="50" height="35" fill="rgb(255,255,255)"/>
+  </g>
+
+
+</defs>
+
+<!-- Indique les points -->
+
+
+<use transform="matrix(1,0,0,1,203.9,-97.2)" x="280" y="140" xlink:href="#astronaute" />
+
+</svg>
