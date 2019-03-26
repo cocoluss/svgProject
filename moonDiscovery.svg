@@ -209,7 +209,7 @@
 <animateTransform xlink:href="#fusée espace"
   attributeName="transform" type="rotate" values="0,0,0;-90,0,0"
   begin="12" dur="2s" repeatCount="1" />
-P
+
 <!-- scene 1 -->
   <use xlink:href="#stars" transform="translate(330, 357)" />
   <use xlink:href="#stars" transform="translate(450, 156)" />
