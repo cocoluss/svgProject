@@ -21,6 +21,10 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect x="125" y="145" width="50" height="35" fill="rgb(255,255,255)"/>
   </g>
 
+  <g id="astronauteDéplacé" >
+    <use xlink:href="#astronaute" />
+  </g>
+
   <g id="moonGround">
     <ellipse cx="500" cy="780" rx="600" ry="200"
     style="fill:grey;stroke:#2e2e1f;stroke-width:2" />
@@ -248,6 +252,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
   <animate attributeType="XML" attributeName="y" from="0" to="200" begin="1s" dur="4s"/>
 </g>
 
+<path id="sortieAstronaute" d="M 140,300 Q 200,20 270,290 T 270,290 S 270,290"/>
 
 
 <!-- objets -->
@@ -255,17 +260,15 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 <!--animate-->
 <g id="alienMoving">
   <use xlink:href="#alien">
-  <animate attributeType="XML" id="come" attributeName="x" from="0" to="-100" begin="1" dur="1.5s"/>
-  <animate attributeType="XML" id="run" attributeName="x" from="-100" to="0" begin="come.end" dur="1.5s"/>
+  <animate attributeType="XML" id="come" attributeName="x" from="0" to="-250" begin="1" dur="1.5s"/>
+  <animate attributeType="XML" id="run" attributeName="x" from="-250" to="0" begin="come.end" dur="1.5s"/>
   </use>
 </g>
 
 
-<g id="#astronauteLeavingFusee">
-  <use xlink:href="#astronaute">
-    <animate attributeType="XML" id="AstronauteleaveX" attributeName="x" from="0" to="200" dur="2s" begin="1" />
-  </use>
-</g>
+
+  
+
 
 <!-- animate -->
 </defs>
@@ -284,11 +287,18 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 <use xlink:href="#stars" transform="translate(700, 40)" />
 <use xlink:href="#stars" transform="translate(280, 102)" />
 <use xlink:href="#stars" transform="translate(600, 180)" />
+
+
+<use xlink:href="#astronauteDéplacé" >
+    <animateMotion path="pathAstronauteSortie" begin="1s" dur="6.5s" repeatCount="0">
+      <mpath xlink:href="#sortieAstronaute"/>
+    </animateMotion>
+  </use>
+
+
 <use xlink:href="#fusée terre"  x="600" y="650" transform="scale(0.3)"/>
 
 <!-- scene -->
-<use xlink:href="#alienMoving" x="1600" y="1200" transform="scale(0.3)" />
-<use xlink:href="#astronauteLeavingFusee"  x="200" y="300"/>
-
+<use xlink:href="#alienMoving" x="1600" y="1200" transform="scale(0.3)"  />
 
 </svg>
