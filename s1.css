@@ -1,13 +1,16 @@
-ellipse
+
+#astronaute rect
 {
-  stroke:indianred;
-  stroke-width:1px;
-  fill:none;
+  fill:black;
+
 }
 
-rect
+#astronaute ellipse
 {
-  stroke:indianred;
-  stroke-width: 1px;
-  fill:none;
+  fill:white;
+}
+
+#alien
+{
+  scale(1);
 }
