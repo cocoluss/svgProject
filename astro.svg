@@ -10,7 +10,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 <!-- objets -->
   <g id="astronaute">
     <ellipse transform="rotate(10)" cx="185" cy="280"  rx="15" ry="40"/> <!-- jambe gauche -->
-    
+
     <ellipse cx="150" cy="166"  rx="35" ry="35"/> <!-- tete -->
     <ellipse transform="rotate(10)" cx="161.2" cy="192.4"  rx="11" ry="23"/> <!-- bras gauche -->
     <ellipse cx="155" cy="215"  rx="9" ry="17" transform="rotate(10)"/> <!-- main gauche -->
@@ -20,10 +20,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
     <ellipse cx="115" cy="330"  rx="15" ry="40" transform="rotate(-10)"/>
     <rect x="125" y="145" width="50" height="35" fill="rgb(255,255,255)"/>
   </g>
-
-  <g id="astronauteDéplacé" >
-    <use xlink:href="#astronaute" />
-  </g>
+  
 
   <g id="moonGround">
     <ellipse cx="500" cy="780" rx="600" ry="200"
@@ -252,7 +249,6 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
   <animate attributeType="XML" attributeName="y" from="0" to="200" begin="1s" dur="4s"/>
 </g>
 
-<path id="sortieAstronaute" d="M 140,300 Q 200,20 270,290 T 270,290 S 270,290"/>
 
 
 <!-- objets -->
@@ -267,7 +263,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 
 
 
-  
+
 
 
 <!-- animate -->
@@ -289,8 +285,9 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 <use xlink:href="#stars" transform="translate(600, 180)" />
 
 
-<use xlink:href="#astronauteDéplacé" >
-    <animateMotion path="pathAstronauteSortie" begin="1s" dur="6.5s" repeatCount="0">
+<path id="sortieAstronaute" d="M 0,0 q 60,-180 140,180 t 140,180 s 140,180" stroke="grey" stroke-width="3"/>
+<use xlink:href="#astronaute" >
+    <animateMotion begin="1s" dur="6.5s" repeatCount="0">
       <mpath xlink:href="#sortieAstronaute"/>
     </animateMotion>
   </use>
