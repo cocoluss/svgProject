@@ -120,6 +120,21 @@
       <use xlink:href = "#fire" x = "0" y = "500" transform = "rotate(-180 150 800)"/>
     </g>
 
+    <g id = "fusée_landing">
+      <ellipse cx="0" cy="355" rx="100" ry="350" fill="rgb(222,222,222)" stroke="black" stroke-width="3"/>
+      <path d="M -75 125 q 75 -300 150 0 l -150 0" style="fill:rgb(214,1,0)" stroke="black" stroke-width="3"/>
+      <use xlink:href = "#plaque_métalique" x = "-12.5" y = "200"/>
+      <use xlink:href = "#plaque_métalique" x = "-12.5" y = "125"/>
+      <use xlink:href = "#plaque_métalique" x = "-12.5" y = "360"/>
+      <use xlink:href = "#plaque_métalique" x = "-12.5" y = "435"/>
+      <use xlink:href = "#plaque_métalique" x = "-12.5" y = "510"/>
+      <use xlink:href = "#hublot" x = "0" y = "50"/>
+      <path id="foot" d="M -100 650 l 200 0 l 75 50 l 25 100 l 25 0 l 5 1 l 5 2 l 5 3 l 5 4 l 5 5 l -125 0 l 5 -5 l 5 -4 l 5 -3 l 5 -2 l 5 -1 l 25 0 l -22 -90 l -65 -42 l -50 15 l -15 15 l -25 10" fill="grey" stroke="black" stroke-width="3"/>
+      <use xlink:href = "#foot" transform="scale(-1,1)"/>
+      <use xlink:href = "#plaque_métalique" x = "-12.5" y = "585"/>
+      <use xlink:href = "#plaque_métalique" x = "-8" y = "295" transform="rotate(-90 2 665) scale(2,2)"/>
+    </g>
+
     <g id = "fusée terre">
       <use xlink:href = "#base" x = "0" y = "0" transform="scale(1,1)"/>
       <ellipse cx="0" cy="355" rx="100" ry="350" fill="rgb(222,222,222)" stroke="black" stroke-width="3"/>
@@ -302,23 +317,32 @@
     <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
       begin="14" dur="1s"/>
     <animate attributeType="XML" attributeName="fill-opacity" values="1"
-      begin="15" dur="15s"/>
+      begin="15" dur="10s"/>
     <animate attributeType="XML" attributeName="stroke-opacity" from="0" to="1"
       begin="14" dur="1s"/>
     <animate attributeType="XML" attributeName="stroke-opacity" values="1"
-      begin="15" dur="15s"/>
+      begin="15" dur="10s"/>
     <animate attributeType="XML" attributeName="y" from="-500" to="0"
       begin="14" dur="6s"/>
-    <animate attributeType="XML" attributeName="y" from="0" to="300"
-      begin="25" dur="5s"/>
+  </use>
+
+  <use xlink:href="#fusée_landing" stroke-opacity="0" fill-opacity="0" transform="scale(0.5,0.5) translate(800,50)">
+  <animate attributeType="XML" attributeName="y" from="0" to="100"
+    begin="25" dur="2s"/>
+  <animate attributeType="XML" attributeName="y" values="100"
+      begin="27" dur="3s"/>
+  <animate attributeType="XML" attributeName="fill-opacity" values="1"
+    begin="25" dur="5s"/>
+  <animate attributeType="XML" attributeName="stroke-opacity" values="1"
+    begin="25" dur="5s"/>
   </use>
 
   <rect x="0" y="0" width="800" height="500" id="fadeOut" fill-opacity="0" style="fill:rgb(03,5,20); stroke:none">
     <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
       begin="28" dur="1s"/>
-      <animate attributeType="XML" attributeName="fill-opacity" values="1"
-        begin="29" dur="50s"/>
-      </rect>
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+      begin="29" dur="50s"/>
+  </rect>
 
 
 
