@@ -255,21 +255,16 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 </defs>
 
 <!-- objects -->
-<use xlink:href="#space"/>
-<use transform="scale(0.30)" x="1300" y="1570" xlink:href="#astronaute"  />
-<use xlink:href="#moonGround"/>
-<use xlink:href="#alien" x="1600" y="1400" transform="scale(0.3)" />
-<use xlink:href="#earth" x="50" y="150" />
 <use xlink:href="#stars" transform="translate(330, 357)" />
 <use xlink:href="#stars" transform="translate(450, 156)" />
-<use xlink:href="#stars" transform="translate(249, 444)" />
-<use xlink:href="#stars" transform="translate(568, 357)" />
-<use xlink:href="#stars" transform="translate(500, 500)" />
+<use xlink:href="#stars" transform="translate(500, 300)" />
 <use xlink:href="#stars" transform="translate(650, 400)" />
-<use xlink:href="#stars" transform="translate(700, 40)" />
-<use xlink:href="#stars" transform="translate(280, 400)" />
-<use xlink:href="#stars" transform="translate(600, 450)" />
-<use xlink:href="#atterissage" x="600" y="900" transform="scale(0.3)"/>
+<use xlink:href="#stars" transform="translate(700, 50)" />
+<use xlink:href="#stars" transform="translate(280, 100)" />
+<use xlink:href="#stars" transform="translate(100, 250)" />
+<use xlink:href="#earth" transform="translate(550, 250)" />
+<use xlink:href="#moon" transform="translate(140, 120)" />
+<use xlink:href="#astroRunningOut" x="160" y="100"/>
 
 
 
