@@ -15,10 +15,140 @@
   scale(1);
 }
 
-#sortieAstronaute{ stroke:limegreen; stroke-width:1.4em; stroke-linecap:round; fill:none; }
+#sortieAstronaute
+{
+  stroke:limegreen; stroke-width:1.4em; stroke-linecap:round; fill:none;
+}
 
 #fadeOut rect
 {
-  fill:rgb(03,5,20); 
+  fill:rgb(03,5,20);
   stroke:none
+}
+
+#white
+{
+  fill:white;
+}
+
+#green
+{
+  fill:green;
+}
+
+#darkgreen
+{
+  fill:darkgreen;
+}
+
+#black
+{
+  fill:black;
+}
+
+#blue
+{
+  fill:blue;
+}
+
+#grey
+{
+  fill:grey;
+}
+
+#grey1
+{
+  fill:rgb(60,60,60);
+}
+
+#grey2
+{
+  fill:rgb(70,70,70);
+}
+
+#grey3
+{
+  fill:rgb(75,75,75);
+}
+
+#grey4
+{
+  fill:rgb(100, 100, 100);
+}
+
+#vitre
+{
+  fill:rgb(57,87,255);
+}
+
+#reflet
+{
+  fill:rgb(57,182,255);
+}
+
+#greyPlaque
+{
+  fill:rgb(150,150,150);
+}
+
+#wings
+{
+  stroke:black;
+  stroke-width:3;
+  fill:rgb(222,222,222);
+}
+
+#courbe
+{
+   fill:rgb(222,222,222);
+   stroke:black;
+   stroke-width:3;
+}
+
+#courbe_int
+{
+  fill:rgb(214,1,0);
+  stroke:black;
+  stroke-width:3;
+}
+
+#propler
+{
+  fill:rgb(222,222,222);
+  stroke:black;
+  stroke-width:6;
+}
+
+#point
+{
+  fill:rgb(150,150,150);
+  stroke:black;
+  stroke-width:3;
+}
+
+#firecolor1
+{
+  fill:#FBB417;
+}
+
+#firecolor2
+{
+  fill:#F57F20;
+}
+
+#firecolor3
+{
+  fill:#FEFEFE;
+}
+
+#firecolor4
+{
+  fill:#EF4A23;
+}
+
+#antenne
+{
+  fill: none;
+  stroke: green;
+  stroke-width: 4px;
 }

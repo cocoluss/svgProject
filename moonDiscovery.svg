@@ -11,9 +11,9 @@
   <defs>
 
     <g id="antenne_alien">
-      <path d="M 200 160 a 20 25 0 0 0 50 50" style="fill: none; stroke: green; stroke-width: 4px; stroke-line join: bevel"/>
-      <circle cy="160" cx="200" r="15" style="fill: green"/>
-      <circle cy="160" cx="200" r="11" style="fill: white"/>
+      <path id="antenne" d="M 200 160 a 20 25 0 0 0 50 50" />
+      <circle id="green" cy="160" cx="200" r="15"/>
+      <circle id="white" cy="160" cx="200" r="11" />
       <circle cy="160" cx="200" r="7"/>
     </g>
 
@@ -27,19 +27,19 @@
     </g>
 
     <g id="head_alien">
-      <circle cy="250" cx="250" r="50" style="fill: green"/>
+      <circle cy="250" cx="250" r="50" id="green"/>
       <use transform="matrix(1,0,0,1,0,0)" xlink:href="#antenne_alien"/>
       <use xlink:href="#antenne_alien" transform="translate(500) scale(-1,1) matrix(1,0,0,1,0,0)"/>
       <use transform="matrix(1,0,0,1,0,0)" xlink:href="#mouth_alien"/>
       <circle cy="222" cx="250" r="20"/>
-      <circle cy="232" cx="250" r="25" style="fill: green"/>
-      <circle cy="230" cx="250" r="20" style="fill: white"/>
+      <circle cy="232" cx="250" r="25" id="green"/>
+      <circle cy="230" cx="250" r="20" id="white"/>
       <circle cy="230" cx="250" r="16"/>
     </g>
 
     <g id="mouth_alien">
-      <circle cy="285" cx="250" r="20" style="fill: green"/>
-      <circle cy="285" cx="250" r="16" style="fill: white"/>
+      <circle cy="285" cx="250" r="20" id="green"/>
+      <circle cy="285" cx="250" r="16" id="white"/>
     </g>
 
     <g id="body_alien">
@@ -47,15 +47,15 @@
       <use xlink:href="#foot_alien" transform="translate(25,15) matrix(1,0,0,1,0,0)" />
       <use xlink:href="#hand_alien" transform="translate(10,-50) matrix(1,0,0,1,0,0)" />
       <use xlink:href="#hand_alien" transform="translate(-110,-50) matrix(1,0,0,1,0,0)" />
-      <ellipse cx="250" cy="300" rx="35" ry="35" fill="darkgreen"/>
+      <ellipse cx="250" cy="300" rx="35" ry="35" id="darkgreen"/>
     </g>
 
     <g id="foot_alien">
-      <ellipse cx="250" cy="340" rx="8" ry="15" fill="green"/>
+      <ellipse cx="250" cy="340" rx="8" ry="15" id="green"/>
     </g>
 
     <g id="hand_alien">
-      <circle cx="300" cy="350" r="10" fill="green"/>
+      <circle cx="300" cy="350" r="10" id="green"/>
     </g>
 
     <g id="alien">
@@ -65,13 +65,13 @@
     </g>
 
     <g id="AhBubble">
-        <ellipse rx="50" ry="30" cx="80" cy="100" style="fill:white"/>
+        <ellipse rx="50" ry="30" cx="80" cy="100" id="white"/>
         <text x="60" y="100" >    AH !!! </text>
     </g>
 
     <g id = "fire">
       <g>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FBB417" d="M159.83,485.671c-4.659-10.22-6.479-21.151-7.72-32.165
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor1" d="M159.83,485.671c-4.659-10.22-6.479-21.151-7.72-32.165
       		c-0.792-7.04-0.653-14.185-1.155-21.239c-1.071-15.067,2.69-28.958,8.483-42.565c4.359-10.24,7.958-20.688,7.379-33.102
       		c8.755,10.219,10.061,23.481,18.46,33.537c-3.478-21.143,8.616-36.418,17.495-52.769c9.958-18.337,18.387-37.253,21.939-57.99
       		c0.801-4.679,0.976-9.466,1.479-14.619c4.574,2.736,7.657,6.966,12,10.546c4.211-17.13,15.825-29.321,25.646-42.608
@@ -99,26 +99,26 @@
       		c6.296,6.541,13.693,11.859,21.523,16.383c13.421,7.754,27.927,11.495,43.428,8.973c9.555-1.555,18.995-3.23,28.762-3.32
       		c10.895-0.101,21.701,1.746,32.688,0.299c12.643-1.665,24.285-4.939,33.707-14.028C394.436,469.417,403.594,444.931,404.242,416.88
       		z"/>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F57F20" d="M430.904,516.98c-5.936,9.745-14.277,16.752-24.428,21.822
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor2" d="M430.904,516.98c-5.936,9.745-14.277,16.752-24.428,21.822
       		c-3.729,1.863-7.059,2.331-10.592-0.365c-3.477-2.655-6.387-3.234-10.174,0.676c-5.068,5.229-11.652,5.019-17.854,1.366
       		c-6.584-3.877-13.447-6.712-21.209-6.856c-2.623-1.052-4.736-2.148-1.055-4.701c0.834-0.577,1.283-1.711,1.898-2.596
       		c6.186-8.893,10.268-10.64,20.73-7.75c9.719,2.684,17.805,0.489,24.729-6.682c0.766-0.792,1.379-2.382,2.932-1.544
       		c1.137,0.614,1.66,1.774,1.658,3.116c-0.004,1.39-0.008,2.779,0.037,4.166c0.051,1.541,0.742,2.447,2.346,1.704
       		c10.322-4.79,20.814-9.585,27.041-19.736c5.953-9.706,10.338-20.113,12.422-31.493c2.014-10.999,4.6-21.919,10.582-31.644
       		c1.6,23.424-0.715,46.178-11.723,67.396C435.939,508.306,433.359,512.611,430.904,516.98z"/>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F57F20" d="M288.392,548.491c-4.495-15.458-12.328-17.534-26.333-17.461
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor2" d="M288.392,548.491c-4.495-15.458-12.328-17.534-26.333-17.461
       		c-5.778,0.029-11.586,1.205-17.314,2.229c-5.435,0.973-10.781,2.438-16.171,3.668c-2.904,0.662-5.734,0.592-8.636-0.347
       		c-18.612-6.02-35.156-15.393-48.705-29.698c-3.99-5.815-8.052-11.593-10.166-18.444c1.216-0.344,2.041,0.313,2.859,1.073
       		c12.274,11.401,27.162,18.101,42.617,23.858c19.054,7.098,38.863,11.35,58.833,14.31c12.984,1.925,25.996,4.117,39.131,5.124
       		c2.059,0.158,4.273,0.349,6.004,1.836c-4.732,4.143-8.811,8.894-12.753,13.769C294.638,548.436,291.515,548.463,288.392,548.491z"
       		/>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F57F20" d="M160.3,486.439c0.907,0.39,1.016,1.13,0.87,1.982
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor2" d="M160.3,486.439c0.907,0.39,1.016,1.13,0.87,1.982
       		C160.205,488.057,160.319,487.218,160.3,486.439z"/>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F57F20" d="M159.83,485.671c0.175,0.272,0.351,0.545,0.526,0.818
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor2" d="M159.83,485.671c0.175,0.272,0.351,0.545,0.526,0.818
       		C160.18,486.217,160.005,485.944,159.83,485.671z"/>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F57F20" d="M345.893,534.775c-0.561,5.071-0.689,10.066,2.539,14.473
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor2" d="M345.893,534.775c-0.561,5.071-0.689,10.066,2.539,14.473
       		c-0.576,0.137-1.152,0.272-1.727,0.41c-2.926-5.349-6.814-9.923-11.283-14.032C338.787,533.8,342.377,534.748,345.893,534.775z"/>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F57F20" d="M404.242,416.88c-0.648,28.051-9.807,52.538-30.311,72.313
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor2" d="M404.242,416.88c-0.648,28.051-9.807,52.538-30.311,72.313
       		c-9.422,9.089-21.064,12.363-33.707,14.028c-10.986,1.447-21.793-0.399-32.688-0.299c-9.767,0.09-19.207,1.766-28.762,3.32
       		c-15.501,2.522-30.007-1.219-43.428-8.973c-7.83-4.523-15.228-9.842-21.523-16.383c-11.394-11.837-18.319-25.728-20.255-42.353
       		c-1.814-15.585-0.116-30.618,4.047-45.546c0.199-0.714,0.862-1.291,1.098-2.002c1.198-3.611,2.434-4.899,5.12-0.822
@@ -134,8 +134,8 @@
       		c-11.133-23.843-23.533-47.02-39.043-68.394c-0.42-0.578-0.375-1.622-1.428-1.444c-0.842,0.142-1.299,0.875-1.361,1.662
       		c-0.611,7.701-4.095,14.351-7.389,21.133c-3.876,7.983-8.846,15.522-10.152,25.778C278.81,357.166,277.231,354.272,275.324,350.771
       		z"/>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FEFEFE" d="M288.392,548.491c3.123-0.027,6.246-0.055,9.368-0.083"/>
-      	<path fill-rule="evenodd" clip-rule="evenodd" fill="#EF4A23" d="M275.324,350.771c1.908,3.501,3.486,6.395,5.709,10.473
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor3" d="M288.392,548.491c3.123-0.027,6.246-0.055,9.368-0.083"/>
+      	<path fill-rule="evenodd" clip-rule="evenodd" id="firecolor4" d="M275.324,350.771c1.908,3.501,3.486,6.395,5.709,10.473
       		c1.306-10.256,6.275-17.794,10.152-25.778c3.294-6.783,6.778-13.433,7.389-21.133c0.063-0.786,0.52-1.52,1.361-1.662
       		c1.053-0.177,1.008,0.867,1.428,1.444c15.51,21.374,27.91,44.551,39.043,68.394c6.883,14.737,13.303,29.712,17.529,45.517
       		c1.695,6.338,0.234,12.216-2.041,17.948c-6.361,16.019-17.443,28.117-32.186,36.702c-10.547,6.142-21.877,10.44-34.169,5.541
@@ -153,36 +153,36 @@
       <ellipse cx="135" cy="240"  rx="11" ry="23" transform="rotate(-10)"/> <!--bras droit-->
       <ellipse cx="135" cy="270"  rx="9" ry="17" transform="rotate(-10)"/> <!-- main droie -->
       <ellipse cx="115" cy="330"  rx="15" ry="40" transform="rotate(-10)"/>
-      <rect x="125" y="145" width="50" height="35" fill="rgb(255,255,255)"/>
+      <rect x="125" y="145" width="50" height="35" id="black"/>
     </g>
 
     <g id = "plaque_métalique">
-      <rect width="25" height="75" fill="rgb(0,0,0)" />
-      <rect width="21" height="75" x="2" fill="rgb(150,150,150)" />
-      <circle id = "point" cx="12.5" r="2" cy="20" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "point" cx="12.5" r="2" cy="55" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
+      <rect width="25" height="75" id="black" />
+      <rect width="21" height="75" x="2" id="greyPlaque" />
+      <circle id = "point" cx="12.5" r="2" cy="20" />
+      <circle id = "point" cx="12.5" r="2" cy="55" />
     </g>
     <g id = "hublot">
-      <circle id = "cercle_métalique" cx="0" r="65" cy="250" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "vitre" cx="0" r="50" cy="250" fill="rgb(57,87,255)" />
-      <circle id = "reflet" cx="25" r="10" cy="235" fill="rgb(57,182,255)" />
-      <circle id = "point" cx="0" r="2" cy="194" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "point" cx="-43" r="2" cy="213" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "point" cx="43" r="2" cy="213" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "point" cx="57" r="2" cy="250" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "point" cx="-57" r="2" cy="250" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "point" cx="-43" r="2" cy="286" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "point" cx="43" r="2" cy="286" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
-      <circle id = "point" cx="0" r="2" cy="306" fill="rgb(150,150,150)" stroke="black" stroke-width="3"/>
+      <circle id = "point" cx="0" r="65" cy="250" />
+      <circle id = "vitre" cx="0" r="50" cy="250" />
+      <circle id = "reflet" cx="25" r="10" cy="235" />
+      <circle id = "point" cx="0" r="2" cy="194" />
+      <circle id = "point" cx="-43" r="2" cy="213" />
+      <circle id = "point" cx="43" r="2" cy="213" />
+      <circle id = "point" cx="57" r="2" cy="250" />
+      <circle id = "point" cx="-57" r="2" cy="250" />
+      <circle id = "point" cx="-43" r="2" cy="286" />
+      <circle id = "point" cx="43" r="2" cy="286" />
+      <circle id = "point" cx="0" r="2" cy="306" />
     </g>
     <g id = "base">
-      <path id = "wings" d="M -75 900 q -100 -200 25 -300 l 50 100 q -75 75 -75 200" stroke="black" stroke-width="3" fill="rgb(222,222,222)" transform="rotate(25,50,750)"/>
-      <path id = "wings" d="M -75 900 q -100 -200 25 -300 l 50 100 q -75 75 -75 200" stroke="black" stroke-width="3" fill="rgb(222,222,222)" transform="rotate(-25,-50,750) scale(-1,1)"/>
+      <path id = "wings" d="M -75 900 q -100 -200 25 -300 l 50 100 q -75 75 -75 200" transform="rotate(25,50,750)"/>
+      <path id = "wings" d="M -75 900 q -100 -200 25 -300 l 50 100 q -75 75 -75 200" transform="rotate(-25,-50,750) scale(-1,1)"/>
     </g>
     <g id = "fusée espace">
-      <ellipse cx="0" cy="355" rx="100" ry="350" fill="rgb(222,222,222)" stroke="black" stroke-width="3"/>
-      <path d="M -75 125 q 75 -300 150 0 l -150 0" fill="rgb(214,1,0)" stroke="black" stroke-width="3"/>
-      <polygon id = "propler" points="150,50 250,50 300,350 100,350" fill="rgb(222,222,222)" stroke="black" stroke-width="6" transform="scale(0.5,0.5) translate(-200,1300)"/>
+      <ellipse id="courbe" cx="0" cy="355" rx="100" ry="350"/>
+      <path id="courbe_int" d="M -75 125 q 75 -300 150 0 l -150 0" />
+      <polygon id = "propler" points="150,50 250,50 300,350 100,350" transform="scale(0.5,0.5) translate(-200,1300)"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "200"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "125"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "360"/>
@@ -200,8 +200,8 @@
     </g>
 
     <g id = "fusée_landing">
-      <ellipse cx="0" cy="355" rx="100" ry="350" fill="rgb(222,222,222)" stroke="black" stroke-width="3"/>
-      <path d="M -75 125 q 75 -300 150 0 l -150 0" fill="rgb(214,1,0)" stroke="black" stroke-width="3"/>
+      <ellipse cx="0" cy="355" rx="100" ry="350" id="courbe"/>
+      <path d="M -75 125 q 75 -300 150 0 l -150 0" id="courbe_int"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "200"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "125"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "360"/>
@@ -216,9 +216,9 @@
 
     <g id = "fusée terre">
       <use xlink:href = "#base" x = "0" y = "0" transform="scale(1,1)"/>
-      <ellipse cx="0" cy="355" rx="100" ry="350" fill="rgb(222,222,222)" stroke="black" stroke-width="3"/>
-      <path d="M -75 125 q 75 -300 150 0 l -150 0" fill="rgb(214,1,0)" stroke="black" stroke-width="3"/>
-      <polygon id = "propler" points="150,50 250,50 300,350 100,350" fill="rgb(222,222,222)" stroke="black" stroke-width="6" transform="scale(0.5,0.5) translate(-200,1300)"/>
+      <ellipse cx="0" cy="355" rx="100" ry="350" id="courbe"/>
+      <path d="M -75 125 q 75 -300 150 0 l -150 0" id="courbe_int"/>
+      <polygon id = "propler" points="150,50 250,50 300,350 100,350" transform="scale(0.5,0.5) translate(-200,1300)"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "200"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "125"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "360"/>
@@ -232,27 +232,31 @@
 
     <g id = "proplerall">
       <use xlink:href = "#base" x = "0" y = "0" transform="scale(1,1)"/>
-      <polygon id = "propler" points="150,50 250,50 300,350 100,350" fill="rgb(222,222,222)" stroke="black" stroke-width="6" transform="scale(0.5,0.5) translate(-200,1300)"/>
+      <polygon id = "propler" points="150,50 250,50 300,350 100,350" transform="scale(0.5,0.5) translate(-200,1300)"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "625" transform="rotate(-90 -325 1000) scale(2,2)"/>
     </g>
 
-    <circle id="stars" cy="2" cx="2" r="2" fill="white"/>
+    <circle id="white" cy="2" cx="2" r="2"/>
     <g id="earth">
-      <circle cy="50" cx="50" r="50" fill="blue"/>
-      <path d="M 50,0 C 75,0 100,25 100,50 S 75,75 50,50 S 60,50 70,50 S 80,25 50,0" fill="green"/>
-      <path d="M 50,100 C 75,100 80,90 85,85" fill="white"/>
-      <ellipse cy="25" cx="60" rx="5" ry="7" fill="green"/>
-      <ellipse cy="55" cx="25" rx="10" ry="20" fill="green" transform="rotate(-30 25 55)"/>
+      <circle cy="50" cx="50" r="50" id="blue"/>
+      <path d="M 50,0 C 75,0 100,25 100,50 S 75,75 50,50 S 60,50 70,50 S 80,25 50,0" id="green"/>
+      <path d="M 50,100 C 75,100 80,90 85,85" id="white"/>
+      <ellipse cy="25" cx="60" rx="5" ry="7" id="green"/>
+      <ellipse cy="55" cx="25" rx="10" ry="20" id="green" transform="rotate(-30 25 55)"/>
     </g>
 
     <g id="moon">
-      <circle cy="30" cx="30" r="30" fill="grey"/>
-      <circle cy="20" cx="20" r="5" fill="rgb(60,60,60)"/>
-      <circle cy="50" cx="25" r="5" fill="rgb(70,70,70)"/>
-      <circle cy="30" cx="50" r="5" fill="rgb(75,75,75)"/>
-      <circle cy="30" cx="40" r="10" fill="rgb(100, 100, 100)"/>
-      <circle cy="10" cx="30" r="5" fill="rgb(100, 100, 100)"/>
-      <circle cy="40" cx="10" r="5" fill="rgb(100, 100, 100)"/>
+      <circle cy="30" cx="30" r="30" id="grey"/>
+      <circle cy="20" cx="20" r="5" id="grey1"/>
+      <circle cy="50" cx="25" r="5" id="grey2"/>
+      <circle cy="30" cx="50" r="5" id="grey3"/>
+      <circle cy="30" cx="40" r="10" id="grey4"/>
+      <circle cy="10" cx="30" r="5" id="grey4"/>
+      <circle cy="40" cx="10" r="5" id="grey4"/>
+    </g>
+
+    <g id="stars">
+      <circle cy="3" cx="3" r="3" id="white"/>
     </g>
 
     <g id="sceneStar">
@@ -273,11 +277,11 @@
     </g>
 
     <g id="moonZoom">
-      <path transform="translate(0,-100)" fill="grey" d="M0 500 c 300 -50, 500 -50, 800 0
+      <path transform="translate(0,-100)" id="grey" d="M0 500 c 300 -50, 500 -50, 800 0
             l 0,500 l -800,0 l 0-500" />
-      <ellipse cx="200" cy="485" rx="100" ry="50" fill="rgb(75,75,75)" />
-      <ellipse cx="400" cy="425" rx="25" ry="10" fill="rgb(70,70,70)" />
-      <ellipse cx="700" cy="475" rx="50" ry="35" fill="rgb(60,60,60)" />
+      <ellipse cx="200" cy="485" rx="100" ry="50" id="grey3" />
+      <ellipse cx="400" cy="425" rx="25" ry="10" id="grey2" />
+      <ellipse cx="700" cy="475" rx="50" ry="35" id="grey1" />
     </g>
 
   </defs>
