@@ -9,6 +9,65 @@
   <rect id="fadeOut" x="0" y="0" width="800" height="500"/>
   <defs>
 
+    <g id="antenne_alien">
+      <path d="M 200 160 a 20 25 0 0 0 50 50" style="fill: none; stroke: green; stroke-width: 4px; stroke-line join: bevel"/>
+      <circle cy="160" cx="200" r="15" style="fill: green"/>
+      <circle cy="160" cx="200" r="11" style="fill: white"/>
+      <circle cy="160" cx="200" r="7"/>
+    </g>
+
+    <g id="astroRunningOut">
+        <use xlink:href="#astronaute"  transform="scale(0.1)">
+            <animateMotion begin="45" dur="12s" repeatCount="0" rotate="auto">
+                <mpath xlink:href="#astroPath"/>
+            </animateMotion>
+            <animate begin="0" attributeType="XML" fill-opacity="0"/>
+        </use>
+    </g>
+
+    <g id="head_alien">
+      <circle cy="250" cx="250" r="50" style="fill: green"/>
+      <use transform="matrix(1,0,0,1,0,0)" xlink:href="#antenne_alien"/>
+      <use xlink:href="#antenne_alien" transform="translate(500) scale(-1,1) matrix(1,0,0,1,0,0)"/>
+      <use transform="matrix(1,0,0,1,0,0)" xlink:href="#mouth_alien"/>
+      <circle cy="222" cx="250" r="20"/>
+      <circle cy="232" cx="250" r="25" style="fill: green"/>
+      <circle cy="230" cx="250" r="20" style="fill: white"/>
+      <circle cy="230" cx="250" r="16"/>
+    </g>
+
+    <g id="mouth_alien">
+      <circle cy="285" cx="250" r="20" style="fill: green"/>
+      <circle cy="285" cx="250" r="16" style="fill: white"/>
+    </g>
+
+    <g id="body_alien">
+      <use xlink:href="#foot_alien" transform="translate(-25,15) matrix(1,0,0,1,0,0)" />
+      <use xlink:href="#foot_alien" transform="translate(25,15) matrix(1,0,0,1,0,0)" />
+      <use xlink:href="#hand_alien" transform="translate(10,-50) matrix(1,0,0,1,0,0)" />
+      <use xlink:href="#hand_alien" transform="translate(-110,-50) matrix(1,0,0,1,0,0)" />
+      <ellipse cx="250" cy="300" rx="35" ry="35" fill="darkgreen"/>
+    </g>
+
+    <g id="foot_alien">
+      <ellipse cx="250" cy="340" rx="8" ry="15" fill="green"/>
+    </g>
+
+    <g id="hand_alien">
+      <circle cx="300" cy="350" r="10" fill="green"/>
+    </g>
+
+    <g id="alien">
+        <use xlink:href="#body_alien" transform="translate(-25,15) matrix(1,0,0,1,0,0)" />
+        <use xlink:href="#head_alien" transform="translate(-25,15) matrix(1,0,0,1,0,0)" />
+        <use xlink:href="#mouth_alien" transform="translate(-25,15) matrix(1,0,0,1,0,0)" />
+    </g>
+
+    <g id="AhBubble">
+        <ellipse rx="50" ry="30" cx="80" cy="100" style="fill:white"/>
+        <text x="60" y="100" >    AH !!! </text>
+    </g>
+
     <g id = "fire">
       <g>
       	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FBB417" d="M159.83,485.671c-4.659-10.22-6.479-21.151-7.72-32.165
@@ -84,6 +143,18 @@
       </g>
     </g>
 
+    <g id="astronaute">
+      <ellipse transform="rotate(10)" cx="185" cy="280"  rx="15" ry="40"/> <!-- jambe gauche -->
+      <ellipse cx="150" cy="166"  rx="35" ry="35"/> <!-- tete -->
+      <ellipse transform="rotate(10)" cx="161.2" cy="192.4"  rx="11" ry="23"/> <!-- bras gauche -->
+      <ellipse cx="155" cy="215"  rx="9" ry="17" transform="rotate(10)"/> <!-- main gauche -->
+      <ellipse cx="150" cy="235"  rx="25" ry="50.5"/> <!-- haut -->
+      <ellipse cx="135" cy="240"  rx="11" ry="23" transform="rotate(-10)"/> <!--bras droit-->
+      <ellipse cx="135" cy="270"  rx="9" ry="17" transform="rotate(-10)"/> <!-- main droie -->
+      <ellipse cx="115" cy="330"  rx="15" ry="40" transform="rotate(-10)"/>
+      <rect x="125" y="145" width="50" height="35" fill="rgb(255,255,255)"/>
+    </g>
+
     <g id = "plaque_métalique">
       <rect width="25" height="75" fill="rgb(0,0,0)" />
       <rect width="21" height="75" x="2" fill="rgb(150,150,150)" />
@@ -119,7 +190,12 @@
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "585"/>
       <use xlink:href = "#plaque_métalique" x = "-12.5" y = "625" transform=" rotate(-90 2 665)"/>
       <use xlink:href = "#hublot" x = "0" y = "50"/>
-      <use xlink:href = "#fire" x = "0" y = "500" transform = "rotate(-180 150 800)"/>
+      <use xlink:href = "#fire" x = "0" y = "0" transform = "rotate(-180 150 800)">
+          <animate attributeType="XML" attributeName="y" values="400;410;390;410;400"
+            begin="0" dur="1s" repeatCount="indefinite"/>
+          <animate attributeType="XML" attributeName="x" values="0;5;-5;5;0;5;-5"
+            begin="0" dur="1s" repeatCount="indefinite"/>
+      </use>
     </g>
 
     <g id = "fusée_landing">
@@ -227,6 +303,14 @@
   attributeName="transform" type="rotate" values="0,0,0;-90,0,0"
   begin="12" dur="2s" repeatCount="1" />
 
+<animateTransform xlink:href="#astronaute"
+  attributeName="transform" type="rotate" values="0,0,0;360,0,0"
+  begin="45" dur="15s"/>
+
+<animateTransform xlink:href="#astronaute"
+  attributeName="transform" type="rotate" values="0,0,0;-90,0,0"
+  begin="41" dur="4s"/>
+
 <!-- scene 1 -->
   <use xlink:href="#stars" transform="translate(330, 357)" />
   <use xlink:href="#stars" transform="translate(450, 156)" />
@@ -278,7 +362,7 @@
 
   <rect id="fadeOut" x="0" y="0" width="800" height="500" fill-opacity="0" >
     <animate attributeType="XML" attributeName="fill-opacity" from="1" to="0"
-        begin="0" dur="2s"/>
+      begin="0" dur="2s"/>
   </rect>
 
 
@@ -288,9 +372,9 @@
   <rect id="fadeOut" x="0" y="0" width="800" height="500" fill-opacity="0" >
     <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
       begin="13" dur="1s"/>
-      <animate attributeType="XML" attributeName="fill-opacity" values="1"
-        begin="14" dur="16s"/>
-      </rect>
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+      begin="14" dur="16s"/>
+  </rect>
 
   <use xlink:href="#sceneStar" fill-opacity="0">
     <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
@@ -329,27 +413,117 @@
   </use>
 
   <use xlink:href="#fusée_landing" stroke-opacity="0" fill-opacity="0" transform="scale(0.5,0.5) translate(800,50)">
-  <animate attributeType="XML" attributeName="y" from="0" to="100"
-    begin="25" dur="2s"/>
-  <animate attributeType="XML" attributeName="y" values="100"
+    <animate attributeType="XML" attributeName="y" from="0" to="100"
+      begin="25" dur="2s"/>
+    <animate attributeType="XML" attributeName="y" values="100"
       begin="27" dur="3s"/>
-  <animate attributeType="XML" attributeName="fill-opacity" values="1"
-    begin="25" dur="5s"/>
-  <animate attributeType="XML" attributeName="stroke-opacity" values="1"
-    begin="25" dur="5s"/>
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+      begin="25" dur="5s"/>
+    <animate attributeType="XML" attributeName="stroke-opacity" values="1"
+      begin="25" dur="5s"/>
   </use>
 
   <rect x="0" y="0" width="800" height="500" id="fadeOut" fill-opacity="0" >
     <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
       begin="28" dur="1s"/>
     <animate attributeType="XML" attributeName="fill-opacity" values="1"
-      begin="29" dur="50s"/>
+      begin="29" dur="1s"/>
   </rect>
 
 
 
   <!-- scene 3 -->
 
+  <path id="motionastro" d="M 100 300 q 75 -150 150 0 q 75 -150 150 0" stroke-opacity="0" fill-opacity="0" />
+  <path id="astropathgo" d="M 400 300 l -150 -300" stroke-opacity="0" fill-opacity="0" />
 
+  <use xlink:href="#sceneStar" fill-opacity="0">
+    <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
+      begin="30" dur="1s"/>
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+      begin="31" dur="14s"/>
+  </use>
+
+  <rect x="0" y="0" width="800" height="500" id="fadeOut" fill-opacity="0" >
+      <animate attributeType="XML" attributeName="fill-opacity" values="1"
+      begin="30" dur="15s"/>
+  </rect>
+
+  <use xlink:href="#moonZoom" fill-opacity="0" >
+    <animate attributeType="XML" attributeName="fill-opacity" from="0"  to="1"
+      begin="30" dur="1s"/>
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+      begin="31" dur="14s"/>
+  </use>
+
+  <use xlink:href="#fusée_landing"  x="600" y="650" transform="scale(0.3)" fill-opacity="0" stroke-opacity="0">
+    <animate attributeType="XML" attributeName="fill-opacity" from="0"  to="1"
+      begin="30" dur="1s"/>
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+      begin="31" dur="14s"/>
+    <animate attributeType="XML" attributeName="stroke-opacity" from="0"  to="1"
+      begin="30" dur="1s"/>
+    <animate attributeType="XML" attributeName="stroke-opacity" values="1"
+      begin="31" dur="14s"/>
+  </use>
+
+  <use xlink:href="#astronaute" transform="scale(0.5,0.5)" fill-opacity="0" >
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+      begin="31" dur="14s"/>
+    <animateMotion begin="31s" dur="8s" repeatCount="0" fill="freeze">
+      <mpath xlink:href="#motionastro" />
+    </animateMotion>
+    <animateMotion begin="41s" dur="4s" repeatCount="0">
+      <mpath xlink:href="#astropathgo" />
+    </animateMotion>
+  </use>
+
+  <use xlink:href="#alien" x="1000" y="600" transform="scale(0.5)" stroke-opacity="0" fill-opacity="0" >
+    <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
+        begin="40" dur="1s"/>
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+        begin="41" dur="4s"/>
+    <animate attributeType="XML" attributeName="stroke-opacity" from="0" to="1"
+        begin="40" dur="1s"/>
+    <animate attributeType="XML" attributeName="stroke-opacity" values="1"
+        begin="41" dur="4s"/>
+  </use>
+
+  <use xlink:href="#AhBubble" x="475" y="180"  stroke-opacity="0" fill-opacity="0" >
+      <animate attributeType="XML" attributeName="fill-opacity" values="1"
+          begin="41" dur="2s"/>
+      <animate attributeType="XML" attributeName="stroke-opacity" values="1"
+          begin="41" dur="2s"/>
+  </use>
+
+  <!-- scene 4 -->
+
+  <path id="astroPath" d="m 0,0 l 100,200" stroke-opacity="0" fill-opacity="0" />
+  <use xlink:href="#astroRunningOut" x="160" y="100" stroke-opacity="0" fill-opacity="0" >
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+        begin="46" dur="14s"/>
+    <animate attributeType="XML" attributeName="stroke-opacity" values="1"
+        begin="46" dur="14s"/>
+    <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
+        begin="45" dur="1s"/>
+    <animate attributeType="XML" attributeName="stroke-opacity" from="0" to="1"
+        begin="45" dur="1s"/>
+  </use>
+
+  <!-- scene END -->
+
+  <rect x="0" y="0" width="800" height="500" id="fadeOut" fill-opacity="0" >
+    <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
+        begin="56" dur="1s" />
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+        begin="57" dur="indefinite"/>
+  </rect>
+
+  <text x="55" y="55" fill="white"  transform="scale(5,5)" fill-opacity="0"> END !
+    <animate attributeType="XML" attributeName="fill-opacity" from="0" to="1"
+        begin="56" dur="1s" />
+    <animate attributeType="XML" attributeName="fill-opacity" values="1"
+        begin="57" dur="indefinite"/>
+  </text>
 
 </svg>
