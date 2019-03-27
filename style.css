@@ -1,0 +1,24 @@
+
+#astronaute rect
+{
+  fill:black;
+
+}
+
+#astronaute ellipse
+{
+  fill:white;
+}
+
+#alien
+{
+  scale(1);
+}
+
+#sortieAstronaute{ stroke:limegreen; stroke-width:1.4em; stroke-linecap:round; fill:none; }
+
+#fadeOut rect
+{
+  fill:rgb(03,5,20); 
+  stroke:none
+}
