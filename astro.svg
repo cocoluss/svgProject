@@ -2,7 +2,7 @@
 
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 
-<svg width="800" height="500"
+<svg width="1024" height="768"
 xmlns="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink">
 <title>Moon exploration</title>
@@ -20,7 +20,6 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
     <ellipse cx="115" cy="330"  rx="15" ry="40" transform="rotate(-10)"/>
     <rect x="125" y="145" width="50" height="35" fill="rgb(255,255,255)"/>
   </g>
-  
 
   <g id="moonGround">
     <ellipse cx="500" cy="780" rx="600" ry="200"
@@ -43,14 +42,6 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
       <circle cy="30" cx="40" r="10" style="fill: rgb(100, 100, 100)"/>
       <circle cy="10" cx="30" r="5" style="fill: rgb(100, 100, 100)"/>
       <circle cy="40" cx="10" r="5" style="fill: rgb(100, 100, 100)"/>
-    </g>
-
-    <g id="moonZoom">
-      <path transform="translate(0,-100)" fill="grey" d="M0 500 c 300 -50, 500 -50, 800 0
-            l 0,500 l -800,0 l 0-500" />
-      <ellipse cx="200" cy="485" rx="100" ry="50" fill="rgb(75,75,75)" />
-      <ellipse cx="400" cy="425" rx="25" ry="10" fill="rgb(70,70,70)" />
-      <ellipse cx="700" cy="475" rx="50" ry="35" fill="rgb(60,60,60)" />
     </g>
 
     <g  id="fusé">
@@ -245,25 +236,19 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
     </g>
 
 <g id="atterissage">
-  <use xlink:href="#fusée espace"/>
+  <use xlink:href="#fusée espace">
+    <animate attributeType="XML" attributeName="y" from="0" to="200" begin="1" dur="4s"/>
+  </use>
+</g>
+<g id="saut astronaute">
+  <use xlink:href="#astronaute"/>
   <animate attributeType="XML" attributeName="y" from="0" to="200" begin="1s" dur="4s"/>
 </g>
-
 
 
 <!-- objets -->
 
 <!--animate-->
-<g id="alienMoving">
-  <use xlink:href="#alien">
-  <animate attributeType="XML" id="come" attributeName="x" from="0" to="-250" begin="1" dur="1.5s"/>
-  <animate attributeType="XML" id="run" attributeName="x" from="-250" to="0" begin="come.end" dur="1.5s"/>
-  </use>
-</g>
-
-
-
-
 
 
 <!-- animate -->
@@ -271,31 +256,22 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 
 <!-- objects -->
 <use xlink:href="#space"/>
-<use xlink:href="#moonZoom"/>
-
+<use transform="scale(0.30)" x="1300" y="1570" xlink:href="#astronaute"  />
+<use xlink:href="#moonGround"/>
+<use xlink:href="#alien" x="1600" y="1400" transform="scale(0.3)" />
 <use xlink:href="#earth" x="50" y="150" />
-<use xlink:href="#stars" transform="translate(330, 257)" />
+<use xlink:href="#stars" transform="translate(330, 357)" />
 <use xlink:href="#stars" transform="translate(450, 156)" />
-<use xlink:href="#stars" transform="translate(249, 244)" />
-<use xlink:href="#stars" transform="translate(568, 257)" />
-<use xlink:href="#stars" transform="translate(500, 300)" />
-<use xlink:href="#stars" transform="translate(650, 200)" />
+<use xlink:href="#stars" transform="translate(249, 444)" />
+<use xlink:href="#stars" transform="translate(568, 357)" />
+<use xlink:href="#stars" transform="translate(500, 500)" />
+<use xlink:href="#stars" transform="translate(650, 400)" />
 <use xlink:href="#stars" transform="translate(700, 40)" />
-<use xlink:href="#stars" transform="translate(280, 102)" />
-<use xlink:href="#stars" transform="translate(600, 180)" />
+<use xlink:href="#stars" transform="translate(280, 400)" />
+<use xlink:href="#stars" transform="translate(600, 450)" />
+<use xlink:href="#atterissage" x="600" y="900" transform="scale(0.3)"/>
 
 
-<path id="sortieAstronaute" d="M 0,0 q 60,-180 140,180 t 140,180 s 140,180" stroke="grey" stroke-width="3"/>
-<use xlink:href="#astronaute" >
-    <animateMotion begin="1s" dur="6.5s" repeatCount="0">
-      <mpath xlink:href="#sortieAstronaute"/>
-    </animateMotion>
-  </use>
 
-
-<use xlink:href="#fusée terre"  x="600" y="650" transform="scale(0.3)"/>
-
-<!-- scene -->
-<use xlink:href="#alienMoving" x="1600" y="1200" transform="scale(0.3)"  />
 
 </svg>
