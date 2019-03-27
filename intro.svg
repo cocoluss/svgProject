@@ -1,0 +1,30 @@
+<?xml-stylesheet type="text/css" href="intro.css" charset="utf-8"?>
+  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="500" viewBox="0 0 1024 " version="1.1">
+    <defs>
+        <rect id="background" x="0" y="0" width="800" height="500"/>
+
+        <path id="textPath" d="M 10,100 C 50,50 150,200 200,120 S 380,20 700,260"/>
+        <g id="animation-text-1">
+            <text class="text">
+              <textPath xlink:href="#textPath" start-offset="100%" fill-opacity="0"> Declassified Archive Movies present
+                <animate attributeName="startOffset" attributeType="XML" from="100%" to="-100%" begin="0" dur="7s"/>
+                <animate attributeType="XML" attributeName="fill-opacity" values="1"
+                    begin="0" dur="7s"/>
+              </textPath>
+            </text>
+        </g>
+        <g id="animation-text-2">
+            <text class="text">
+              <textPath xlink:href="#textPath" start-offset="100%" fill-opacity="0"> The first manned Moon landing on 20 July 1969
+                <animate attributeName="startOffset" attributeType="XML" from="100%" to="-100%" begin="7" dur="7s"/>
+                <animate attributeType="XML" attributeName="fill-opacity" values="1"
+                    begin="7" dur="7s"/>
+              </textPath>
+            </text>
+        </g>
+    </defs>
+      <use xlink:href="#background"/>
+      <use xlink:href="#animation-text-1" x="300" y="300"/>
+      <use xlink:href="#animation-text-2" x="300" y="300"/>
+  </svg>
